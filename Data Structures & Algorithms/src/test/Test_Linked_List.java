@@ -16,7 +16,12 @@ public class Test_Linked_List {
 		list.addElementsToLast(5);
 		list.addElementsToLast(6);
 		list.addElementsToLast(head, 7);
-		list.printLinkedList(head);
+		//list.printLinkedList(head);
+		list.printLinkedList();
+		list.addElementToFirst(2);
+		list.printLinkedList();
+		list.addElementToIndex(3, 7);
+		System.out.println("Final List");
 		list.printLinkedList();
 	}  
 

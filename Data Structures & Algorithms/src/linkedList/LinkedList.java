@@ -72,4 +72,32 @@ public class LinkedList {
             tnode = tnode.next;
         }
 	}
+	
+	public void addElementToFirst(int data) {
+		
+		Node temp = new Node(data);
+		temp.next =head;
+		head = temp;
+		
+	}
+	
+	public void addElementToIndex(int data, int index) {
+		
+		Node newNode = new Node(data);
+		Node temp = head;
+		Node endNode = null;
+		try {
+		for(int i=0;i<index-1;i++) {
+			
+			temp = temp.next;
+			endNode = temp.next;
+			
+		}
+		temp.next = newNode;
+		newNode.next = endNode;
+		}catch(NullPointerException e) {
+			System.out.println("Index dosen't exist");
+		}
+		
+	}
 }
