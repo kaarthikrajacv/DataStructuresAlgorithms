@@ -100,4 +100,48 @@ public class LinkedList {
 		}
 		
 	}
+	
+	public void deleteHead() {
+		
+		head = head.next;
+	}
+	
+	public void deleteLastNode() {
+		
+		Node temp = head;
+		while (temp.next.next !=null) {
+			temp = temp.next;
+		}
+		
+		temp.next = null;
+		
+		
+	}
+	
+	public void deleteNodeInMiddle(int data) {
+		
+		Node prev = null;
+		Node current = head;
+		
+		if(current == null) {return;}
+		
+		if(current.data == data) {
+			head = current.next;
+			current = null;
+			return;
+		}
+		
+		while(current.data != data) {
+			prev = current;
+			current = current.next;
+			if(current == null) {
+				System.out.println("Search Node not found");
+				return;
+			}
+		}
+		
+		prev.next = current.next;
+		current = null;
+		
+	}
 }

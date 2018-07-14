@@ -19,10 +19,14 @@ public class Test_Linked_List {
 		//list.printLinkedList(head);
 		list.printLinkedList();
 		list.addElementToFirst(2);
-		list.printLinkedList();
-		list.addElementToIndex(3, 7);
+		//list.printLinkedList();
+		list.addElementToIndex(3, 2);
 		System.out.println("Final List");
+		list.deleteHead();
+		list.deleteLastNode();
+		list.deleteNodeInMiddle(7);
 		list.printLinkedList();
+		
 	}  
 
 }
