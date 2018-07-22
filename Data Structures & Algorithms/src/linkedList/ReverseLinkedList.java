@@ -2,9 +2,9 @@ package linkedList;
 
 public class ReverseLinkedList {
 	
-	public Node head;
+	private Node head;
 	
-	public static class Node{
+	private static class Node{
 		
 		int data;
 		public Node next;
@@ -14,7 +14,7 @@ public class ReverseLinkedList {
 		}
 	}
 	
-	public void addElementsToLast(int data) {
+	private void addElementsToLast(int data) {
 		
 		if(head == null) {
 			
@@ -33,7 +33,7 @@ public class ReverseLinkedList {
 
 	}
 	
-	public void printLinkedList() {
+	private void printLinkedList() {
 		
 		Node tnode = head;
         while (tnode != null)
