@@ -1,6 +1,6 @@
 package test;
 
-import tree.LevelOrderTraversal.Node;
+import tree.BoundaryOfATree.Node;
 
 public class Test_Tree {
 	
@@ -15,8 +15,8 @@ public class Test_Tree {
         root.right.right = new Node(7); 
         root.right.left.right = new Node(8); 
         root.right.right.right = new Node(9); 
-        System.out.println("Diagonal Order traversal is"); 
-        tree.LevelOrderTraversal.LevelOrderTraversalPrint(root);
+        System.out.println("Diameter is"); 
+        tree.BoundaryOfATree.findTreeBoundary(root);
 		
 	}
 
