@@ -1,40 +1,23 @@
 package test;
 
-import linkedList.*;
-import linkedList.LinkedListArrange_InPlace.Node;
+
+import linkedList.AddTwoLLtoFormNewLL;
+import linkedList.AddTwoLLtoFormNewLL.Node;
 
 public class Test_Linked_List {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		
-		LinkedListArrange_InPlace list = new LinkedListArrange_InPlace();
-		Node head;// = list.head;
-		head = new Node(1);
-		list.head = head;
+		Node n1 = new Node(1);
+		n1.next = new Node(2);
+		n1.next.next = new Node(3);
 		
-		list.addElementsToLast(2);
-		list.addElementsToLast(3);
-		list.addElementsToLast(4);
-		list.addElementsToLast(5);
-		//list.addElementsToLast(6);
-		
-		list.printLinkedList();
-		//list.removeDuplicates();
-		Node mid = list.findMidLinkedList(head);
-		Node node1 = head;
-		Node node2 = mid.next;
-		mid.next = null;
-		
-		node2 = list.reverseLinkedList(node2);
-		list.rearrangeInPlace(node1,node2);
-		System.out.println("After inplace sorting");
-		list.printLinkedList();
+		Node n2 = new Node(4);
+		n2.next = new Node(5);
+		n2.next.next = new Node(6);
 		
 		
-		//list.printLinkedList();
-		
-		
+		Node o3 = new AddTwoLLtoFormNewLL().addTwoNumbers(n1, n2);
 	}  
 
 }

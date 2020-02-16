@@ -2,6 +2,8 @@ package strings;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
+import java.util.TreeSet;
 
 public class MinimumWindowSubstring {
 	
@@ -10,15 +12,19 @@ public class MinimumWindowSubstring {
 	        //String ans = "";
 	        int begin = 0;
 	        int end = 0;
+	        Set<Character> unique = new TreeSet<Character>();
+	        for(char c : s.toCharArray()) {
+	            unique.add(c);
+	        }
 	        int numberOfUniques = 0;
 	        int[] range = new int[2];
 	        range[1] = Integer.MAX_VALUE;
 	        char[] letters = s.toCharArray();
-	        char[] tArray = t.toCharArray();
+	        //char[] tArray = unique
 	        
 	        int count = 0;
-	        for(int i = 0; i < tArray.length; i++){
-	            map.put(tArray[i], map.getOrDefault(tArray[i], 0) + 1);
+	        for(char c : unique) {
+	        	map.put(c, 1);
 	        }
 	        
 	        numberOfUniques = map.size();
@@ -94,8 +100,8 @@ public class MinimumWindowSubstring {
 	    
 	    public static void main(String[] args) {
 			
-	    	String s = "caa";
-	    	String t = "cad";
+	    	String s = "caabcd";
+	    	String t = "aaabcd";
 	    	System.out.println("String lenghth is " + s.length());
 	    	System.out.println("Min window is " + minWindow(s,t));
 		}

@@ -10,7 +10,8 @@ public class FlipZerosForContinuous1s {
 		flipZeros(arr,m);
 
 	}
-
+	
+	// Dynamic programming solution........
 	private static void flipZeros(int[] arr, int m) {
 		
 		int lW = 0, rW = 0;
