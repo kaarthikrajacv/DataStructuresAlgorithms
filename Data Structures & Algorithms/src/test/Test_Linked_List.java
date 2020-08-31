@@ -1,23 +1,30 @@
 package test;
 
 
-import linkedList.AddTwoLLtoFormNewLL;
-import linkedList.AddTwoLLtoFormNewLL.Node;
+
+import linkedList.ReverseInGroups;
+import linkedList.ReverseInGroups.Node;
 
 public class Test_Linked_List {
 
 	public static void main(String[] args) {
 		
-		Node n1 = new Node(1);
-		n1.next = new Node(2);
-		n1.next.next = new Node(3);
+		ReverseInGroups  merge = new ReverseInGroups();
 		
-		Node n2 = new Node(4);
-		n2.next = new Node(5);
-		n2.next.next = new Node(6);
+		merge.addElementsToLast(1);
 		
+		merge.addElementsToLast(2);
 		
-		Node o3 = new AddTwoLLtoFormNewLL().addTwoNumbers(n1, n2);
+		merge.addElementsToLast(3);
+		
+		merge.addElementsToLast(4);
+		
+
+		merge.printLinkedList(null);
+		
+		Node temp = merge.reverseKGroup(merge.returnHead(), 3);
+		
+		merge.printLinkedList(temp);
 	}  
 
 }
